@@ -1,0 +1,22 @@
+---
+layout: base.njk
+permalink: "/actions/"
+title: "Nos actions"
+description: "Émission hebdomadaire, ateliers radio, hors les murs, maisons de jeunes, le Studio, fact-checking : toutes les actions de Tous Ensemble C'est Nous."
+---
+<section id="actions" class="first-section">
+  <div class="reveal visible" style="transition-delay: 0s;">
+    <div class="section-label">Ce qu'on fait</div>
+    <h2 class="section-title">Nos actions</h2>
+    <p class="section-body">Des projets concrets, sur le terrain, avec et pour la jeunesse des quartiers populaires.</p>
+  </div>
+  <div class="actions-grid">
+    {% for a in collections.actionsList %}
+    <div class="action-card reveal visible" id="{{ a.data.slug }}" style="transition-delay: 0s;">
+      <div class="action-icon">{{ a.data.icon }}</div>
+      <div class="action-title">{{ a.data.title }}</div>
+      <div class="action-desc">{{ a.templateContent | safe }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

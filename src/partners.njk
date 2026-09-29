@@ -1,0 +1,18 @@
+---
+layout: base.njk
+permalink: "/partners/"
+title: "Nos partenaires"
+description: "Ville d'Aubervilliers, C4.United, Auber Nations Cup, The Flat, OMJA : les partenaires de Tous Ensemble C'est Nous."
+---
+<section id="partners" class="first-section">
+  <div class="partners-inner reveal visible" style="transition-delay: 0s;">
+    <div class="section-label">Ils nous soutiennent</div>
+    <h2 class="section-title">Nos partenaires</h2>
+    <p class="section-body" style="margin: 0 auto;">Ensemble avec les acteurs qui font vivre le quartier et la ville.</p>
+    <div class="partners-grid">
+      {% for p in collections.partners %}
+      <div class="partner-card"><img src="{{ p.data.logo }}" alt="{{ p.data.name }}"></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

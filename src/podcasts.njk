@@ -1,0 +1,35 @@
+---
+layout: base.njk
+permalink: "/podcasts/"
+title: "Podcasts"
+description: "Tous les épisodes du podcast FOCUS de Tous Ensemble C'est Nous, à écouter ou réécouter."
+---
+<section id="podcasts" class="first-section">
+  <div class="reveal visible" style="transition-delay: 0s;">
+    <div class="section-label">À écouter</div>
+    <h2 class="section-title">Nos podcasts</h2>
+    <p class="section-body">Les derniers épisodes de FOCUS et de nos autres émissions, à retrouver ici au fil des semaines.</p>
+  </div>
+
+  {% if collections.podcasts.length > 0 %}
+  <div class="podcasts-grid">
+    {% for ep in collections.podcasts %}
+    <div class="podcast-card reveal visible" style="transition-delay: 0s;">
+      {% if ep.data.cover %}
+      <div class="podcast-cover"><img src="{{ ep.data.cover }}" alt="{{ ep.data.title }}"></div>
+      {% endif %}
+      <div class="podcast-body">
+        <div class="podcast-date">{{ ep.data.date | dateFr }}</div>
+        <div class="podcast-title">{{ ep.data.title }}</div>
+        <div class="podcast-desc">{{ ep.data.description }}</div>
+        {% if ep.data.listen_url %}
+        <a href="{{ ep.data.listen_url }}" class="podcast-listen">▶ Écouter l'épisode</a>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="podcasts-empty">Les épisodes arrivent bientôt — revenez faire un tour !</div>
+  {% endif %}
+</section>

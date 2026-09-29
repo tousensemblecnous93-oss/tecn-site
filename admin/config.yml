@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+locale: "fr"
+
+collections:
+  - name: "podcasts"
+    label: "🎙️ Podcasts"
+    label_singular: "épisode"
+    folder: "src/content/podcasts"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: title
+    fields:
+      - { label: "Titre de l'épisode", name: "title", widget: "string" }
+      - { label: "Date de diffusion", name: "date", widget: "date" }
+      - { label: "Image de couverture", name: "cover", widget: "image", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Lien pour écouter (IDFM, Spotify, YouTube...)", name: "listen_url", widget: "string", required: false }
+
+  - name: "actions"
+    label: "🎯 Nos actions"
+    label_singular: "action"
+    folder: "src/content/actions"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { label: "Ordre d'affichage (1, 2, 3...)", name: "order", widget: "number" }
+      - { label: "Identifiant technique (ne pas modifier)", name: "slug", widget: "string" }
+      - { label: "Emoji / icône", name: "icon", widget: "string" }
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Description", name: "body", widget: "text" }
+
+  - name: "partners"
+    label: "🤝 Partenaires"
+    label_singular: "partenaire"
+    folder: "src/content/partners"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    identifier_field: name
+    fields:
+      - { label: "Ordre d'affichage (1, 2, 3...)", name: "order", widget: "number" }
+      - { label: "Nom du partenaire", name: "name", widget: "string" }
+      - { label: "Logo", name: "logo", widget: "image" }
+
+  - name: "photos"
+    label: "📸 Galerie Médias"
+    label_singular: "photo"
+    folder: "src/content/photos"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    identifier_field: caption
+    fields:
+      - { label: "Ordre d'affichage (1, 2, 3...)", name: "order", widget: "number" }
+      - { label: "Photo", name: "image", widget: "image" }
+      - { label: "Légende", name: "caption", widget: "string" }
+
+  - name: "settings"
+    label: "⚙️ Réglages du site"
+    files:
+      - name: "general"
+        label: "Textes & coordonnées"
+        file: "_data/settings.json"
+        fields:
+          - { label: "Nom du site", name: "site_title", widget: "string" }
+          - { label: "Accroche (bandeau du haut)", name: "hero_tag", widget: "string" }
+          - { label: "Texte d'intro (page d'accueil)", name: "hero_intro", widget: "text" }
+          - { label: "Nombre d'émissions diffusées", name: "episodes_count", widget: "string" }
+          - { label: "Texte horaires FOCUS", name: "focus_schedule_text", widget: "string" }
+          - { label: "Email de contact", name: "contact_email", widget: "string" }
+          - { label: "Adresse", name: "contact_address", widget: "string" }
+          - { label: "Lien Instagram", name: "instagram_url", widget: "string" }
+          - { label: "Identifiant Instagram affiché", name: "instagram_handle", widget: "string" }
+          - { label: "Lien pour écouter la radio en direct", name: "idfm_url", widget: "string" }
+          - { label: "Numéro SIRET", name: "siret", widget: "string" }
