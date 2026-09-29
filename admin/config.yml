@@ -19,9 +19,10 @@ collections:
     fields:
       - { label: "Titre de l'épisode", name: "title", widget: "string" }
       - { label: "Date de diffusion", name: "date", widget: "date" }
-      - { label: "Image de couverture", name: "cover", widget: "image", required: false }
+      - { label: "Image de couverture", name: "cover", widget: "image", required: false, hint: "Utilisée si tu ne mets pas de vidéo ci-dessous" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Lien pour écouter (IDFM, Spotify, YouTube...)", name: "listen_url", widget: "string", required: false }
+      - { label: "Lien vidéo YouTube (optionnel)", name: "video_url", widget: "string", required: false, hint: "Colle le lien de la vidéo YouTube (ex: https://youtube.com/watch?v=...). Si rempli, la vidéo s'affiche à la place de l'image." }
+      - { label: "Lien pour écouter (IDFM, Spotify...)", name: "listen_url", widget: "string", required: false, hint: "Affiché en plus, utile si la vidéo n'est pas sur YouTube" }
 
   - name: "actions"
     label: "🎯 Nos actions"
