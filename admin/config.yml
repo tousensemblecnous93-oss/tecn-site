@@ -21,7 +21,8 @@ collections:
       - { label: "Date de diffusion", name: "date", widget: "date" }
       - { label: "Image de couverture", name: "cover", widget: "image", required: false, hint: "Utilisée si tu ne mets pas de vidéo ci-dessous" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Lien vidéo YouTube (optionnel)", name: "video_url", widget: "string", required: false, hint: "Colle le lien de la vidéo YouTube (ex: https://youtube.com/watch?v=...). Si rempli, la vidéo s'affiche à la place de l'image." }
+      - { label: "Lien vidéo YouTube (optionnel)", name: "video_url", widget: "string", required: false, hint: "Colle le lien de la vidéo YouTube (ex: https://youtube.com/watch?v=...). Prioritaire sur la vidéo uploadée ci-dessous si les deux sont remplis." }
+      - { label: "Ou vidéo à uploader directement (optionnel)", name: "video_file", widget: "file", required: false, hint: "⚠️ Réserve ceci à de courtes vidéos (quelques dizaines de Mo max). Pour des émissions longues, préfère le lien YouTube ci-dessus." }
       - { label: "Lien pour écouter (IDFM, Spotify...)", name: "listen_url", widget: "string", required: false, hint: "Affiché en plus, utile si la vidéo n'est pas sur YouTube" }
 
   - name: "actions"
