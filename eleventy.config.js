@@ -25,6 +25,12 @@ module.exports = function (eleventyConfig) {
     return date.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
   });
 
+  eleventyConfig.addFilter("youtubeId", (url) => {
+    if (!url) return null;
+    const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([a-zA-Z0-9_-]{11})/);
+    return match ? match[1] : null;
+  });
+
   return {
     dir: { input: "src", includes: "../_includes", data: "../_data", output: "_site" },
     markdownTemplateEngine: "njk",
