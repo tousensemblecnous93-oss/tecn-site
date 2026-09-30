@@ -20,6 +20,10 @@ description: "Tous les Ã©pisodes du podcast FOCUS de Tous Ensemble C'est Nous, Ã
       <div class="podcast-video">
         <iframe src="https://www.youtube.com/embed/{{ ytid }}" title="{{ ep.data.title }}" loading="lazy" allowfullscreen></iframe>
       </div>
+      {% elif ep.data.video_file %}
+      <div class="podcast-video">
+        <video src="{{ ep.data.video_file }}" controls preload="metadata"></video>
+      </div>
       {% elif ep.data.cover %}
       <div class="podcast-cover"><img src="{{ ep.data.cover }}" alt="{{ ep.data.title }}"></div>
       {% endif %}
