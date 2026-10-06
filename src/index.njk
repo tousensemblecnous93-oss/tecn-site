@@ -20,22 +20,12 @@ description: "Tous Ensemble C'est Nous est une association culturelle et média 
       <a href="/focus/" class="btn-outline">Émission FOCUS →</a>
     </div>
     <div class="hero-stats">
+      {% for s in home.stats %}
       <div>
-        <div class="stat-num">2019</div>
-        <div class="stat-label">Année de création</div>
+        <div class="stat-num">{{ s.num }}</div>
+        <div class="stat-label">{{ s.label }}</div>
       </div>
-      <div>
-        <div class="stat-num">27+</div>
-        <div class="stat-label">Émissions diffusées</div>
-      </div>
-      <div>
-        <div class="stat-num">20×</div>
-        <div class="stat-label">Sorties radio mobile</div>
-      </div>
-      <div>
-        <div class="stat-num">50+</div>
-        <div class="stat-label">Jeunes accompagnés</div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

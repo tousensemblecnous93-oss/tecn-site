@@ -6,9 +6,9 @@ description: "Ville d'Aubervilliers, C4.United, Auber Nations Cup, The Flat, OMJ
 ---
 <section id="partners" class="first-section">
   <div class="partners-inner reveal visible" style="transition-delay: 0s;">
-    <div class="section-label">Ils nous soutiennent</div>
-    <h2 class="section-title">Nos partenaires</h2>
-    <p class="section-body" style="margin: 0 auto;">Ensemble avec les acteurs qui font vivre le quartier et la ville.</p>
+    <div class="section-label">{{ partnerspage.label }}</div>
+    <h2 class="section-title">{{ partnerspage.title }}</h2>
+    <p class="section-body" style="margin: 0 auto;">{{ partnerspage.intro }}</p>
     <div class="partners-grid">
       {% for p in collections.partners %}
       <div class="partner-card"><img src="{{ p.data.logo }}" alt="{{ p.data.name }}"></div>

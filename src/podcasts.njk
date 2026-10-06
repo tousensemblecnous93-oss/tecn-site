@@ -6,9 +6,9 @@ description: "Tous les épisodes du podcast FOCUS de Tous Ensemble C'est Nous, �
 ---
 <section id="podcasts" class="first-section">
   <div class="reveal visible" style="transition-delay: 0s;">
-    <div class="section-label">À écouter</div>
-    <h2 class="section-title">Nos podcasts</h2>
-    <p class="section-body">Les derniers épisodes de FOCUS et de nos autres émissions, à retrouver ici au fil des semaines.</p>
+    <div class="section-label">{{ podcastspage.label }}</div>
+    <h2 class="section-title">{{ podcastspage.title }}</h2>
+    <p class="section-body">{{ podcastspage.intro }}</p>
   </div>
 
   {% if collections.podcasts.length > 0 %}
@@ -39,6 +39,6 @@ description: "Tous les épisodes du podcast FOCUS de Tous Ensemble C'est Nous, �
     {% endfor %}
   </div>
   {% else %}
-  <div class="podcasts-empty">Les épisodes arrivent bientôt — revenez faire un tour !</div>
+  <div class="podcasts-empty">{{ podcastspage.empty }}</div>
   {% endif %}
 </section>

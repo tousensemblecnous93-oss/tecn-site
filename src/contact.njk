@@ -6,9 +6,9 @@ description: "Contactez Tous Ensemble C'est Nous à Aubervilliers : email, Insta
 ---
 <section id="contact" class="first-section">
   <div class="contact-inner reveal visible" style="transition-delay: 0s;">
-    <div class="section-label">Nous rejoindre</div>
-    <h2 class="section-title">Contacte-nous</h2>
-    <p class="section-body" style="margin: 0 auto 1rem;">Tu veux participer, collaborer ou en savoir plus ? On est là.</p>
+    <div class="section-label">{{ contact.label }}</div>
+    <h2 class="section-title">{{ contact.title }}</h2>
+    <p class="section-body" style="margin: 0 auto 1rem;">{{ contact.intro }}</p>
     <div class="contact-info">
       <a href="mailto:{{ settings.contact_email }}" class="contact-item">
         <span class="contact-icon">✉️</span>

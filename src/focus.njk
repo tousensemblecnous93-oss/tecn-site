@@ -9,43 +9,28 @@ description: "FOCUS, l'émission phare de Tous Ensemble C'est Nous, tous les ven
     <div class="reveal visible" style="transition-delay: 0s;">
       <div class="focus-badge">
         <span class="pulse"></span>
-        Sur les ondes
+        {{ focus.badge }}
       </div>
-      <div class="section-label">L'émission phare</div>
-      <h2 class="section-title">FOCUS</h2>
-      <p class="section-body">Un portrait en joie et en musique d'une personnalité au parcours inspirant. Des invités qui partagent conseils, clés de réussite, leurs racines, leurs succès et leurs échecs.</p>
+      <div class="section-label">{{ focus.label }}</div>
+      <h2 class="section-title">{{ focus.title }}</h2>
+      <p class="section-body">{{ focus.intro }}</p>
       <div class="focus-schedule" id="focus-schedule">
+        {% for row in focus.schedule %}
         <div class="schedule-row">
           <div class="schedule-dot"></div>
-          <div class="schedule-text"><strong>Tous les vendredis</strong> de 21h à 22h</div>
+          <div class="schedule-text">{% if row.before %}{{ row.before }} {% endif %}<strong>{{ row.bold }}</strong>{% if row.after %} {{ row.after }}{% endif %}</div>
         </div>
-        <div class="schedule-row">
-          <div class="schedule-dot"></div>
-          <div class="schedule-text"><strong>IDFM Radio 98.0</strong> – idfm98.fr</div>
-        </div>
-        <div class="schedule-row">
-          <div class="schedule-dot"></div>
-          <div class="schedule-text">Animée par des <strong>jeunes de 16 à 25 ans</strong> d'Aubervilliers</div>
-        </div>
-        <div class="schedule-row">
-          <div class="schedule-dot"></div>
-          <div class="schedule-text"><strong>{{ settings.episodes_count }}+ émissions</strong> enregistrées et diffusées</div>
-        </div>
+        {% endfor %}
       </div>
     </div>
     <div class="focus-visual reveal visible" style="transition-delay: 0s;">
       <div class="focus-logo">FOCUS</div>
-      <div class="focus-tagline">L'émission</div>
-      <div class="focus-fm">98 FM · IDFM98.FR</div>
+      <div class="focus-tagline">{{ focus.tagline }}</div>
+      <div class="focus-fm">{{ focus.fm }}</div>
       <div class="focus-guests">
-        <span class="guest-tag">Musique</span>
-        <span class="guest-tag">Sport</span>
-        <span class="guest-tag">Cinéma</span>
-        <span class="guest-tag">Santé</span>
-        <span class="guest-tag">Entrepreneuriat</span>
-        <span class="guest-tag">Engagement</span>
-        <span class="guest-tag">Art</span>
-        <span class="guest-tag">Jeunesse</span>
+        {% for t in focus.tags %}
+        <span class="guest-tag">{{ t }}</span>
+        {% endfor %}
       </div>
     </div>
   </div>
