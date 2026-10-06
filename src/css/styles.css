@@ -82,7 +82,11 @@
     text-transform: none; color: rgba(35,31,61,0.8);
   }
   .dropdown li a:hover { background: rgba(236,72,153,0.08); color: var(--pink); }
-
+  /* Pont invisible : le sous-menu ne se ferme plus quand la souris descend */
+  .dropdown::before {
+    content: ""; position: absolute;
+    left: 0; right: 0; top: -24px; height: 24px;
+  }
   /* ── HERO ── */
   #hero {
     min-height: 100vh;
