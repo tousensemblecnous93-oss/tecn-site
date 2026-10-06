@@ -66,6 +66,124 @@ collections:
       - { label: "Photo", name: "image", widget: "image" }
       - { label: "Légende", name: "caption", widget: "string" }
 
+  - name: "pages"
+    label: "📝 Textes des pages"
+    files:
+      - name: "home"
+        label: "Accueil — chiffres clés"
+        file: "_data/home.json"
+        fields:
+          - label: "Chiffres clés (4 recommandés)"
+            name: "stats"
+            widget: "list"
+            summary: "{{fields.num}} — {{fields.label}}"
+            fields:
+              - { label: "Chiffre (ex: 27+)", name: "num", widget: "string" }
+              - { label: "Légende", name: "label", widget: "string" }
+
+      - name: "about"
+        label: "L'asso (qui sommes-nous)"
+        file: "_data/about.json"
+        fields:
+          - { label: "Petit titre au-dessus", name: "label", widget: "string" }
+          - { label: "Grand titre", name: "title", widget: "text", hint: "Appuie sur Entrée pour passer à la ligne" }
+          - { label: "Texte de présentation", name: "intro", widget: "text" }
+          - label: "Agréments (affichés en gras)"
+            name: "agrements"
+            widget: "list"
+            field: { label: "Agrément", name: "item", widget: "string" }
+          - { label: "Réseaux (en gras)", name: "reseaux_fort", widget: "string", required: false }
+          - { label: "Réseaux (suite, en texte normal)", name: "reseaux_suite", widget: "string", required: false }
+          - label: "Nos valeurs"
+            name: "values"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+
+      - name: "actionspage"
+        label: "Nos actions (introduction de la page)"
+        file: "_data/actionspage.json"
+        fields:
+          - { label: "Petit titre au-dessus", name: "label", widget: "string" }
+          - { label: "Grand titre", name: "title", widget: "string" }
+          - { label: "Texte d'introduction", name: "intro", widget: "text" }
+
+      - name: "focus"
+        label: "Focus (l'émission)"
+        file: "_data/focus.json"
+        fields:
+          - { label: "Badge (ex: Sur les ondes)", name: "badge", widget: "string" }
+          - { label: "Petit titre au-dessus", name: "label", widget: "string" }
+          - { label: "Grand titre", name: "title", widget: "string" }
+          - { label: "Texte de présentation", name: "intro", widget: "text" }
+          - label: "Infos pratiques (horaires, radio...)"
+            name: "schedule"
+            widget: "list"
+            summary: "{{fields.bold}}"
+            fields:
+              - { label: "Texte avant (optionnel)", name: "before", widget: "string", required: false }
+              - { label: "Texte en gras", name: "bold", widget: "string" }
+              - { label: "Texte après (optionnel)", name: "after", widget: "string", required: false }
+          - { label: "Sous-titre du bloc FOCUS", name: "tagline", widget: "string" }
+          - { label: "Fréquence radio / site", name: "fm", widget: "string" }
+          - label: "Thèmes abordés"
+            name: "tags"
+            widget: "list"
+            field: { label: "Thème", name: "tag", widget: "string" }
+
+      - name: "podcastspage"
+        label: "Podcasts (introduction de la page)"
+        file: "_data/podcastspage.json"
+        fields:
+          - { label: "Petit titre au-dessus", name: "label", widget: "string" }
+          - { label: "Grand titre", name: "title", widget: "string" }
+          - { label: "Texte d'introduction", name: "intro", widget: "text" }
+          - { label: "Message quand il n'y a aucun épisode", name: "empty", widget: "string" }
+
+      - name: "mediapage"
+        label: "Médias (introduction de la page)"
+        file: "_data/mediapage.json"
+        fields:
+          - { label: "Petit titre au-dessus", name: "label", widget: "string" }
+          - { label: "Grand titre", name: "title", widget: "string" }
+          - { label: "Texte d'introduction", name: "intro", widget: "text" }
+
+      - name: "mission"
+        label: "Mission (constats et objectifs)"
+        file: "_data/mission.json"
+        fields:
+          - { label: "Petit titre au-dessus", name: "label", widget: "string" }
+          - { label: "Grand titre", name: "title", widget: "text", hint: "Appuie sur Entrée pour passer à la ligne" }
+          - { label: "Texte d'introduction", name: "intro", widget: "text" }
+          - label: "Objectifs (numérotés automatiquement)"
+            name: "objectifs"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+          - { label: "Encadré « Rejoins l'aventure » — titre", name: "cta_title", widget: "string" }
+          - { label: "Encadré — premier paragraphe", name: "cta_text1", widget: "text" }
+          - { label: "Encadré — deuxième paragraphe", name: "cta_text2", widget: "text" }
+
+      - name: "partnerspage"
+        label: "Partenaires (introduction de la page)"
+        file: "_data/partnerspage.json"
+        fields:
+          - { label: "Petit titre au-dessus", name: "label", widget: "string" }
+          - { label: "Grand titre", name: "title", widget: "string" }
+          - { label: "Texte d'introduction", name: "intro", widget: "text" }
+
+      - name: "contact"
+        label: "Contact (introduction de la page)"
+        file: "_data/contact.json"
+        fields:
+          - { label: "Petit titre au-dessus", name: "label", widget: "string" }
+          - { label: "Grand titre", name: "title", widget: "string" }
+          - { label: "Texte d'introduction", name: "intro", widget: "text" }
+
   - name: "settings"
     label: "⚙️ Réglages du site"
     files:
@@ -76,7 +194,6 @@ collections:
           - { label: "Nom du site", name: "site_title", widget: "string" }
           - { label: "Accroche (bandeau du haut)", name: "hero_tag", widget: "string" }
           - { label: "Texte d'intro (page d'accueil)", name: "hero_intro", widget: "text" }
-          - { label: "Nombre d'émissions diffusées", name: "episodes_count", widget: "string" }
           - { label: "Email de contact", name: "contact_email", widget: "string" }
           - { label: "Adresse", name: "contact_address", widget: "string" }
           - { label: "Lien Instagram", name: "instagram_url", widget: "string" }
