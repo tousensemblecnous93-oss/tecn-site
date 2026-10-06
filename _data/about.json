@@ -1,0 +1,25 @@
+{
+  "label": "Qui sommes-nous",
+  "title": "Culture,\nMédias & ESS",
+  "intro": "Créée en 2019 par Sidy Kanté, l'association Tous Ensemble C'est Nous est une association culturelle et d'éducation populaire. Elle s'engage à défendre l'accès à la culture et l'éducation aux médias pour les jeunes des quartiers populaires.",
+  "agrements": [
+    "Jeunesse & Éducation Populaire",
+    "Service Civique"
+  ],
+  "reseaux_fort": "Diversité et Participation – OFAJ",
+  "reseaux_suite": "Radio indépendante",
+  "values": [
+    {
+      "title": "Le Partage",
+      "desc": "Partage d'informations, d'opinions et d'expériences à travers les médias et plateformes que l'association met en place. Un échange ouvert et enrichissant au cœur de la communauté."
+    },
+    {
+      "title": "La Tolérance",
+      "desc": "Un environnement inclusif et respectueux, promouvant l'acceptation de la diversité des opinions, des cultures et des modes de vie au sein de la communauté."
+    },
+    {
+      "title": "La Transmission",
+      "desc": "Partager des connaissances et des valeurs avec les jeunes à travers des programmes éducatifs, des ateliers de formation et des initiatives de mentorat."
+    }
+  ]
+}

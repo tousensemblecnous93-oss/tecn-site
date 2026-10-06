@@ -1,0 +1,40 @@
+{
+  "badge": "Sur les ondes",
+  "label": "L'émission phare",
+  "title": "FOCUS",
+  "intro": "Un portrait en joie et en musique d'une personnalité au parcours inspirant. Des invités qui partagent conseils, clés de réussite, leurs racines, leurs succès et leurs échecs.",
+  "schedule": [
+    {
+      "before": "",
+      "bold": "Tous les vendredis",
+      "after": "de 21h à 22h"
+    },
+    {
+      "before": "",
+      "bold": "IDFM Radio 98.0",
+      "after": "– idfm98.fr"
+    },
+    {
+      "before": "Animée par des",
+      "bold": "jeunes de 16 à 25 ans",
+      "after": "d'Aubervilliers"
+    },
+    {
+      "before": "",
+      "bold": "27+ émissions",
+      "after": "enregistrées et diffusées"
+    }
+  ],
+  "tagline": "L'émission",
+  "fm": "98 FM · IDFM98.FR",
+  "tags": [
+    "Musique",
+    "Sport",
+    "Cinéma",
+    "Santé",
+    "Entrepreneuriat",
+    "Engagement",
+    "Art",
+    "Jeunesse"
+  ]
+}

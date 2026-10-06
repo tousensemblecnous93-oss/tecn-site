@@ -1,0 +1,26 @@
+{
+  "label": "Notre raison d'être",
+  "title": "Constats &\nObjectifs",
+  "intro": "La jeunesse des banlieues ressent un sentiment d'abandon et de manque de reconnaissance. Elle s'est éloignée des médias traditionnels, se sentant stigmatisée et mal représentée.",
+  "objectifs": [
+    {
+      "title": "Réconcilier la jeunesse avec les médias",
+      "desc": "Rapprocher les jeunes de la politique et des institutions républicaines par la participation active."
+    },
+    {
+      "title": "Lutter contre la désinformation",
+      "desc": "Prévenir la propagation des fausses informations et promouvoir un traitement rigoureux de l'information."
+    },
+    {
+      "title": "Surmonter la fracture sociale",
+      "desc": "Créer des ponts entre les quartiers populaires et le reste de la société, pour une plus grande cohésion."
+    },
+    {
+      "title": "Combattre le sentiment d'abandon",
+      "desc": "Valoriser les réussites, les actions citoyennes et les aspects positifs des quartiers populaires."
+    }
+  ],
+  "cta_title": "Rejoins l'aventure",
+  "cta_text1": "Tu as entre 11 et 29 ans ? Tu veux apprendre la radio, prendre la parole, ou simplement te découvrir un talent caché ? Rejoins nos ateliers, nos sorties hors les murs, ou viens enregistrer ton podcast au studio.",
+  "cta_text2": "Ensemble, on fait entendre les voix qui comptent."
+}
