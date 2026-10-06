@@ -41,6 +41,12 @@
 }
 </script>
 {% endif %}
+<style>
+  /* Les sous-menus restent ouverts quand la souris descend du lien vers eux (ordinateur uniquement) */
+  @media (min-width: 769px) {
+    .dropdown::before { content: ""; position: absolute; left: 0; right: 0; top: -24px; height: 24px; }
+  }
+</style>
 </head>
 <body>
 
@@ -67,12 +73,7 @@
         {% endfor %}
       </ul>
     </li>
-    <li class="has-dropdown">
-      <a href="/focus/">Focus <span class="caret">▾</span></a>
-      <ul class="dropdown">
-        <li><a href="/focus/">L'émission</a></li>
-        <li><a href="/focus/#focus-schedule">Programmation</a></li>
-    </li>
+    <li><a href="/focus/">Focus</a></li>
     <li><a href="/podcasts/">Podcasts</a></li>
     <li><a href="/media/">Médias</a></li>
     <li class="has-dropdown">
