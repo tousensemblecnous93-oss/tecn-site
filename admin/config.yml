@@ -77,7 +77,6 @@ collections:
           - { label: "Accroche (bandeau du haut)", name: "hero_tag", widget: "string" }
           - { label: "Texte d'intro (page d'accueil)", name: "hero_intro", widget: "text" }
           - { label: "Nombre d'émissions diffusées", name: "episodes_count", widget: "string" }
-          - { label: "Texte horaires FOCUS", name: "focus_schedule_text", widget: "string" }
           - { label: "Email de contact", name: "contact_email", widget: "string" }
           - { label: "Adresse", name: "contact_address", widget: "string" }
           - { label: "Lien Instagram", name: "instagram_url", widget: "string" }
